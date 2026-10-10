@@ -40,7 +40,14 @@ const DD_RADIO_TRACKS = [
   {id:"ZHQWQI8pmqs",t:"The Wrath of Sanity — Earth Crisis"},
   {id:"qbmWs6Jf5dc",t:"Anarchy in the UK — Sex Pistols"},
   {id:"IL0nhn88aVA",t:"Die for Your Government — Anti-Flag"},
-  {id:"oh8zcbC_Dcw",t:"Story of My Life — Social Distortion"}
+  {id:"oh8zcbC_Dcw",t:"Story of My Life — Social Distortion"},
+  {id:"3mbvWn1EY6g",t:"Ace of Spades — Motörhead"},
+  {id:"VnL1qKYbwQQ",t:"Powerload — Disfear"},
+  {id:"eIXnoH4TVts",t:"A Brutal Sight of War — Disfear"},
+  {id:"J5yvIcghXTQ",t:"Pity the Weak — Fall of Efrafa"},
+  {id:"kgAyiQgBL88",t:"Breaking the Chains — Dokken"},
+  {id:"7lGv3trbuBc",t:"Time for Death — GWAR"},
+  {id:"2V5WlR6Rkxg",t:"Americanized — GWAR"}
 ];
 
 (function(){
