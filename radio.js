@@ -56,7 +56,13 @@ const DD_RADIO_TRACKS = [
   {id:"JrAxmXDSiuA",t:"Concubine — Converge"},
   {id:"mmo3HFa2vjg",t:"Fight the Power — Public Enemy"},
   {id:"dQw4w9WgXcQ",t:"Never Gonna Give You Up — Rick Astley"},
-  {id:"2_hveXzklMA",t:"Baby Got Back (Sir Mix-A-Lot cover) — Throwdown"}
+  {id:"2_hveXzklMA",t:"Baby Got Back (Sir Mix-A-Lot cover) — Throwdown"},
+  {id:"82EzkIBdYgk",t:"The Boy Who Destroyed the World — AFI"},
+  {id:"plAr3adKbyc",t:"Speed — Atari Teenage Riot"},
+  {id:"U0u-OB7ztMg",t:"Start the Riot — Atari Teenage Riot"},
+  {id:"IQHsRNd_Lew",t:"Into the Death — Atari Teenage Riot"},
+  {id:"c4IujSNz7Tw",t:"Raverbashing — Atari Teenage Riot"},
+  {id:"L3m71EoIhN4",t:"Midijunkies — Atari Teenage Riot"}
 ];
 
 (function(){
