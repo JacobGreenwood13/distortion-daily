@@ -329,18 +329,26 @@ body{padding-bottom:130px}
   flex:1;font-family:var(--font-mono);font-size:.72rem;color:#f3eee1;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.04em;
 }
-/* Ad peephole: parked off-screen during music; pops above the bar (cropped to Skip) during ads */
-#dd-ad-peek{
-  position:absolute;left:-9999px;top:0;width:640px;height:360px;z-index:60;
+/* Ad skip: inline button in bar; hidden YouTube layer positioned so its Skip sits under ours */
+#dd-r-skipad{
+  display:none;background:#b3232a;border:2px solid #b3232a;color:#fff;
+  font-family:var(--font-mono);font-size:.65rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;padding:.25rem .5rem;cursor:pointer;white-space:nowrap;
+  animation:dd-pulse 1s infinite;
 }
-#dd-ad-peek #dd-yt-holder{position:absolute;width:640px;height:360px;left:0;top:0}
-#dd-ad-peek #dd-yt-holder iframe{width:640px!important;height:360px!important;border:none}
-#dd-radio.ad-playing #dd-ad-peek{
-  left:auto;right:12px;top:auto;bottom:calc(100% + 8px);
-  width:200px;height:90px;overflow:hidden;
-  border:2px solid #b3232a;background:#000;box-shadow:0 -2px 12px rgba(0,0,0,.5);
+#dd-radio.ad-playing #dd-r-skipad{display:inline-block;pointer-events:none}
+@keyframes dd-pulse{0%,100%{opacity:1}50%{opacity:.6}}
+#dd-ad-clicklayer{
+  position:absolute;left:-9999px;top:0;width:640px;height:360px;
+  opacity:.01;pointer-events:none;z-index:59;
 }
-#dd-radio.ad-playing #dd-ad-peek #dd-yt-holder{left:-440px;top:-270px}
+#dd-ad-clicklayer #dd-yt-holder{position:absolute;width:640px;height:360px;left:0;top:0}
+#dd-ad-clicklayer #dd-yt-holder iframe{width:640px!important;height:360px!important;border:none}
+/* During ads: move layer so YouTube's skip button sits under our visible button */
+#dd-radio.ad-playing #dd-ad-clicklayer{
+  left:0;top:0;pointer-events:auto;
+  clip-path:inset(0 0 0 0); /* we position via JS for precise alignment */
+}
 @media (max-width:720px){
   #dd-radio-track{font-size:.62rem}
   .dd-radio-controls button{width:1.7rem;height:1.7rem;font-size:.75rem}

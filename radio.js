@@ -48,7 +48,8 @@ const DD_RADIO_TRACKS = [
   const btnShuffle = document.getElementById('dd-r-shuffle');
   const btnRepeat = document.getElementById('dd-r-repeat');
   const toggle = document.getElementById('dd-radio-toggle');
-  const adPeek = document.getElementById('dd-ad-peek');
+  const skipBtn = document.getElementById('dd-r-skipad');
+  const clickLayer = document.getElementById('dd-ad-clicklayer');
 
   function shuffled(arr){
     const a = arr.slice();
@@ -71,15 +72,23 @@ const DD_RADIO_TRACKS = [
       playerVars:{ autoplay:0, controls:0, disablekb:1, fs:0, iv_load_policy:3, rel:0 },
       events:{
         onReady:function(){
+          player.cueVideoById(DD_RADIO_TRACKS[playOrder[currentIdx]].id);
           updateTitle();
-          // Ad detection: poll video id; if it doesn't match the track, an ad is playing
+          // Ad detection: only when actively playing and video id mismatches the track
           setInterval(function(){
-            if (!player || !player.getVideoData) return;
+            if (!player || !player.getVideoData || !player.getPlayerState) return;
             try {
+              const st = player.getPlayerState();
+              if (st !== YT.PlayerState.PLAYING && st !== YT.PlayerState.BUFFERING){
+                bar.classList.remove('ad-playing'); return;
+              }
               const vd = player.getVideoData();
               const expected = DD_RADIO_TRACKS[playOrder[currentIdx]].id;
-              const isAd = !vd || !vd.video_id || vd.video_id !== expected;
-              bar.classList.toggle('ad-playing', isAd);
+              const isAd = vd && vd.video_id && vd.video_id !== expected;
+              const wasAd = bar.classList.contains('ad-playing');
+              bar.classList.toggle('ad-playing', !!isAd);
+              if (isAd && !wasAd) positionClickLayer();
+              if (!isAd && wasAd && clickLayer) clickLayer.style.clipPath = '';
             } catch(e){}
           }, 1500);
         },
@@ -134,6 +143,25 @@ const DD_RADIO_TRACKS = [
     bar.classList.toggle('collapsed');
     toggle.textContent = bar.classList.contains('collapsed') ? '▲ RADIO' : '▼ HIDE';
   });
+
+  // Position hidden YouTube layer so its Skip button sits under our visible SKIP AD button.
+  // YouTube's skip is bottom-right of the 640x360 player, approx center (575,300).
+  function positionClickLayer(){
+    if (!clickLayer || !skipBtn) return;
+    try {
+      const barR = bar.getBoundingClientRect();
+      const btnR = skipBtn.getBoundingClientRect();
+      const cx = (btnR.left + btnR.right) / 2 - barR.left;
+      const cy = (btnR.top + btnR.bottom) / 2 - barR.top;
+      const holder = document.getElementById('dd-yt-holder');
+      if (holder){
+        holder.style.left = (cx - 575) + 'px';
+        holder.style.top = (cy - 300) + 'px';
+      }
+      // Only the skip-button region is clickable; rest of iframe is clipped away
+      clickLayer.style.clipPath = 'inset(' + Math.max(0, cy-340) + 'px ' + Math.max(0, 640-(cx-535)) + 'px ' + Math.max(0, 360-(cy-260)) + 'px ' + Math.max(0, cx-615) + 'px)';
+    } catch(e){}
+  }
 
   // Load YouTube IFrame API
   const tag = document.createElement('script');
