@@ -53,7 +53,11 @@ const DD_RADIO_TRACKS = [
   {id:"Cgf11TwNBYo",t:"Wake the Dead — Comeback Kid"},
   {id:"hn13BLQv-UE",t:"Hailing on Me — Comeback Kid"},
   {id:"XN2FrUUq-zI",t:"Ready to Fall — Rise Against"},
-  {id:"_RYBDTnS7dg",t:"Re-Education (Through Labor) — Rise Against"}
+  {id:"_RYBDTnS7dg",t:"Re-Education (Through Labor) — Rise Against"},
+  {id:"IswsKb3fmTM",t:"Raised Ignorant EP — Capitalist Casualties"},
+  {id:"JrAxmXDSiuA",t:"Concubine — Converge"},
+  {id:"mmo3HFa2vjg",t:"Fight the Power — Public Enemy"},
+  {id:"dQw4w9WgXcQ",t:"Never Gonna Give You Up — Rick Astley"}
 ];
 
 (function(){
