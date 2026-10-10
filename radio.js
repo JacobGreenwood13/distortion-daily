@@ -72,7 +72,10 @@ const DD_RADIO_TRACKS = [
   {id:"GkCZI_uqbVI",t:"Ain't Like You (Wasted Youth II) — Blood for Blood"},
   {id:"Enm9TD0y5Ok",t:"Watch Me Sink — Have Heart"},
   {id:"6X5QrvaJdlI",t:"Life Is Hard Enough — Have Heart"},
-  {id:"Yf738EgINdA",t:"Watch Me Rise — Have Heart"}
+  {id:"Yf738EgINdA",t:"Watch Me Rise — Have Heart"},
+  {id:"ng_wwCrM_JI",t:"Strength Through Unity — 25 ta Life"},
+  {id:"D7L03e4WuQ0",t:"Took My Kindness for Weakness — 25 ta Life"},
+  {id:"l9gdBFcZ20U",t:"Turning Point — 25 ta Life"}
 ];
 
 (function(){
