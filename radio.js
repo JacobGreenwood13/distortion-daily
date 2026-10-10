@@ -14,8 +14,6 @@ const DD_RADIO_TRACKS = [
   {id:"Ee_uujKuJMI",t:"American Idiot — Green Day"},
   {id:"A1OqtIqzScI",t:"Holiday — Green Day"},
   {id:"Ypkmp6D90KU",t:"Straight Edge — Minor Threat"},
-  {id:"QNJbaMXUJCM",t:"Rock the 40 Oz. — Leftover Crack"},
-  {id:"Cp-nG_MYuBo",t:"Crack City Rockers — Leftover Crack"},
   {id:"xCMTiJfOF94",t:"In Ashes They Shall Reap — Hatebreed"},
   {id:"HB3tmC2f3t0",t:"I Will Be Heard — Hatebreed"},
   {id:"tdkNurRmxzI",t:"Slaughterhouse-Five — Bury Your Dead"},
