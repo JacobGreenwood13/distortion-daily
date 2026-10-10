@@ -57,7 +57,8 @@ const DD_RADIO_TRACKS = [
   {id:"IswsKb3fmTM",t:"Raised Ignorant EP — Capitalist Casualties"},
   {id:"JrAxmXDSiuA",t:"Concubine — Converge"},
   {id:"mmo3HFa2vjg",t:"Fight the Power — Public Enemy"},
-  {id:"dQw4w9WgXcQ",t:"Never Gonna Give You Up — Rick Astley"}
+  {id:"dQw4w9WgXcQ",t:"Never Gonna Give You Up — Rick Astley"},
+  {id:"2_hveXzklMA",t:"Baby Got Back (Sir Mix-A-Lot cover) — Throwdown"}
 ];
 
 (function(){
