@@ -47,7 +47,11 @@ const DD_RADIO_TRACKS = [
   {id:"J5yvIcghXTQ",t:"Pity the Weak — Fall of Efrafa"},
   {id:"kgAyiQgBL88",t:"Breaking the Chains — Dokken"},
   {id:"7lGv3trbuBc",t:"Time for Death — GWAR"},
-  {id:"2V5WlR6Rkxg",t:"Americanized — GWAR"}
+  {id:"2V5WlR6Rkxg",t:"Americanized — GWAR"},
+  {id:"z5rRZdiu1UE",t:"Sabotage — Beastie Boys"},
+  {id:"BSXCogYvQlw",t:"Headbanger Face Rip — Municipal Waste"},
+  {id:"Cgf11TwNBYo",t:"Wake the Dead — Comeback Kid"},
+  {id:"hn13BLQv-UE",t:"Hailing on Me — Comeback Kid"}
 ];
 
 (function(){
