@@ -258,6 +258,7 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 }
 @media (prefers-reduced-motion:reduce){
   .ticker-track{animation:none}
+  #dd-radio-track .dd-track-scroll{animation:none}
   html{scroll-behavior:auto}
 }
 
@@ -327,8 +328,13 @@ body{padding-bottom:130px}
 .dd-radio-controls button.active{background:#b3232a;border-color:#b3232a;color:#fff}
 #dd-radio-track{
   flex:1;font-family:var(--font-mono);font-size:.72rem;color:#f3eee1;
-  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.04em;
+  white-space:nowrap;overflow:hidden;letter-spacing:.04em;
 }
+#dd-radio-track .dd-track-scroll{
+  display:inline-block;white-space:nowrap;
+  animation:dd-track-tick 14s linear infinite;
+}
+@keyframes dd-track-tick{to{transform:translateX(-50%)}}
 /* Ad skip: inline button in bar; hidden YouTube layer positioned so its Skip sits under ours */
 #dd-r-skipad{
   display:none;background:#b3232a;border:2px solid #b3232a;color:#fff;

@@ -85,7 +85,13 @@ const DD_RADIO_TRACKS = [
   }
 
   function updateTitle(){
-    if (titleEl) titleEl.textContent = DD_RADIO_TRACKS[playOrder[currentIdx]].t;
+    if (!titleEl) return;
+    const t = DD_RADIO_TRACKS[playOrder[currentIdx]].t;
+    titleEl.innerHTML = '';
+    const s = document.createElement('span');
+    s.className = 'dd-track-scroll';
+    s.textContent = t + '  \u2715  ' + t + '  \u2715  ';
+    titleEl.appendChild(s);
   }
   function updatePlayBtn(){
     if (!btnPlay || !player) return;
