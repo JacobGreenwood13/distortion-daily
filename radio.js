@@ -62,7 +62,15 @@ const DD_RADIO_TRACKS = [
   {id:"U0u-OB7ztMg",t:"Start the Riot — Atari Teenage Riot"},
   {id:"IQHsRNd_Lew",t:"Into the Death — Atari Teenage Riot"},
   {id:"c4IujSNz7Tw",t:"Raverbashing — Atari Teenage Riot"},
-  {id:"L3m71EoIhN4",t:"Midijunkies — Atari Teenage Riot"}
+  {id:"L3m71EoIhN4",t:"Midijunkies — Atari Teenage Riot"},
+  {id:"NmKgLX2OTjA",t:"Livin' in Exile — Blood for Blood"},
+  {id:"1CP9Peipxzk",t:"White Trash Anthem — Blood for Blood"},
+  {id:"QgXzA47_h8U",t:"Revenge on Society — Blood for Blood"},
+  {id:"H8kMuluhKKQ",t:"Some Kind of Hate — Blood for Blood"},
+  {id:"5AyiNm9LH1I",t:"Mother Dear — Blood for Blood"},
+  {id:"AvOMroxnOiU",t:"Cheap Wine — Blood for Blood"},
+  {id:"OLnRlgVESEM",t:"Wasted Youth Crew (My Kind Belong Nowhere) — Blood for Blood"},
+  {id:"GkCZI_uqbVI",t:"Ain't Like You (Wasted Youth II) — Blood for Blood"}
 ];
 
 (function(){
