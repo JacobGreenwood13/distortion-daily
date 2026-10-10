@@ -37,10 +37,12 @@
   function loadPage(url, push){
     var hash = '';
     try { hash = new URL(url).hash; } catch(e){}
+    try { document.title = 'PJAX-DBG: fetching ' + url; } catch(_){}
     fetch(url, {credentials:'same-origin'}).then(function(r){
-      if (!r.ok) throw new Error('bad response');
+      if (!r.ok) throw new Error('bad response ' + r.status);
       return r.text();
     }).then(function(html){
+      try { document.title = 'PJAX-DBG: got ' + html.length + ' chars'; } catch(_){}
       var doc = new DOMParser().parseFromString(html, 'text/html');
       var newMain = doc.querySelector('main');
       var curMain = document.querySelector('main');
@@ -54,8 +56,17 @@
         if (t) { t.scrollIntoView(); return; }
       }
       window.scrollTo(0, 0);
-    }).catch(function(){
-      location.href = url; // anything goes wrong: normal full load
+    }).catch(function(err){
+      var msg = 'PJAX-DBG FAIL: ' + (err && (err.stack || err.message || String(err)));
+      try { document.title = msg.slice(0, 120); } catch(_){}
+      try {
+        var d = document.createElement('div');
+        d.id = 'pjax-debug';
+        d.style.cssText = 'position:fixed;top:0;left:0;z-index:99999;background:#b3232a;color:#fff;padding:1rem;font:14px monospace;max-width:92vw;';
+        d.textContent = msg;
+        document.body.appendChild(d);
+      } catch(_){}
+      setTimeout(function(){ location.href = url; }, 8000); // delayed fallback so the error can be read
     });
   }
   document.addEventListener('click', function(e){
