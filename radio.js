@@ -51,7 +51,9 @@ const DD_RADIO_TRACKS = [
   {id:"z5rRZdiu1UE",t:"Sabotage — Beastie Boys"},
   {id:"BSXCogYvQlw",t:"Headbanger Face Rip — Municipal Waste"},
   {id:"Cgf11TwNBYo",t:"Wake the Dead — Comeback Kid"},
-  {id:"hn13BLQv-UE",t:"Hailing on Me — Comeback Kid"}
+  {id:"hn13BLQv-UE",t:"Hailing on Me — Comeback Kid"},
+  {id:"XN2FrUUq-zI",t:"Ready to Fall — Rise Against"},
+  {id:"_RYBDTnS7dg",t:"Re-Education (Through Labor) — Rise Against"}
 ];
 
 (function(){
