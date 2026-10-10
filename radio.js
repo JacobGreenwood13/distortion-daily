@@ -29,7 +29,7 @@ const DD_RADIO_TRACKS = [
   {id:"2sUnjIosNIc",t:"The Power Remains — Amebix"},
   {id:"SlKO2FIpSVM",t:"Vote with a Bullet — Corrosion of Conformity"},
   {id:"8J50oxoIt2I",t:"Technocracy — Corrosion of Conformity"},
-  {id:"sDwcHUeG6Nc",t:"Wild in the Streets — Circle Jerks"},
+  {id:"jjqoR2I_nko",t:"World Up My Ass — Circle Jerks"},
   {id:"V9n3riCpH7o",t:"The Art of American Football — Funeral For a Friend"},
   {id:"99KkbFjZR20",t:"Bite It You Scum — GG Allin"},
   {id:"wcChJCrPtwI",t:"Cokie the Clown — NOFX"},
