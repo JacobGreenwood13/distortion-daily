@@ -18,21 +18,30 @@ const DD_RADIO_PLAYLIST_ID = "5x8sTGqcxPCJfhEVvH8vfK"; // Distortion Daily Radio
     toggle.textContent = bar.classList.contains('collapsed') ? '▲ RADIO' : '▼ HIDE';
   });
 
-  // Spotify login: opens Spotify auth in a popup; embed picks up the session for full tracks
+  // Spotify login: PKCE OAuth bounce — tap, approve on Spotify, auto-return to site
   const loginBtn = document.getElementById('dd-spotify-login');
+  const SPOTIFY_CLIENT_ID = 'edeff6e17fbc4e8586bf627b0c60800f';
+  const REDIRECT_URI = 'https://distortion-daily.org/radio-callback.html';
+  function b64url(buf) {
+    return btoa(String.fromCharCode.apply(null, new Uint8Array(buf)))
+      .replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+  }
   if (loginBtn) {
     loginBtn.addEventListener('click', () => {
-      const w = window.open('https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F', '_blank', 'width=480,height=640');
-      const check = setInterval(() => {
-        if (!w || w.closed) {
-          clearInterval(check);
-          // Reload embed to pick up the new session
-          frame.src = frame.src;
-          loginBtn.textContent = 'SPOTIFY ✓';
-          loginBtn.classList.add('logged-in');
-          try { localStorage.setItem('dd-spotify-hint', '1'); } catch(e) {}
-        }
-      }, 1000);
+      try {
+        if (localStorage.getItem('dd-spotify-hint') === '1') return; // already connected
+      } catch(e) {}
+      const verifier = b64url(crypto.getRandomValues(new Uint8Array(64)));
+      try { sessionStorage.setItem('dd-spotify-verifier', verifier); } catch(e) {}
+      crypto.subtle.digest('SHA-256', new TextEncoder().encode(verifier)).then(function(hash){
+        const challenge = b64url(hash);
+        const url = 'https://accounts.spotify.com/authorize?client_id='+SPOTIFY_CLIENT_ID
+          + '&response_type=code&redirect_uri='+encodeURIComponent(REDIRECT_URI)
+          + '&scope='+encodeURIComponent('streaming user-read-email user-read-private')
+          + '&code_challenge_method=S256&code_challenge='+challenge
+          + '&show_dialog=false';
+        location.href = url; // bounce to Spotify, auto-return after approval
+      });
     });
     try {
       if (localStorage.getItem('dd-spotify-hint') === '1') {

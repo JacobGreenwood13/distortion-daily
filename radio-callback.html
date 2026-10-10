@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Connecting Spotify… — Distortion Daily</title>
+<style>body{background:#181410;color:#f3eee1;font-family:monospace;display:flex;align-items:center;justify-content:center;height:100vh;margin:0}</style>
+</head>
+<body>
+<p id="msg">Connecting…</p>
+<script>
+(function(){
+  var msg = document.getElementById('msg');
+  var params = new URLSearchParams(window.location.search);
+  var code = params.get('code');
+  var err = params.get('error');
+  if (err) { msg.textContent = 'Spotify login failed. Returning…'; setTimeout(function(){ location.href='/'; }, 2000); return; }
+  var verifier = sessionStorage.getItem('dd-spotify-verifier');
+  if (!code || !verifier) { msg.textContent = 'Missing login data. Returning…'; setTimeout(function(){ location.href='/'; }, 2000); return; }
+  var body = new URLSearchParams({ grant_type:'authorization_code', code:code, redirect_uri:'https://distortion-daily.org/radio-callback.html', client_id:'edeff6e17fbc4e8586bf627b0c60800f', code_verifier:verifier });
+  fetch('https://accounts.spotify.com/api/token', { method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'}, body:body })
+    .then(function(r){ return r.json(); })
+    .then(function(d){
+      if (d.access_token) {
+        try {
+          localStorage.setItem('dd-spotify-token', d.access_token);
+          localStorage.setItem('dd-spotify-refresh', d.refresh_token || '');
+          localStorage.setItem('dd-spotify-exp', String(Date.now() + (d.expires_in||3600)*1000));
+          localStorage.setItem('dd-spotify-hint','1');
+        } catch(e){}
+        msg.textContent = 'Connected! Returning…';
+      } else { msg.textContent = 'Login did not complete. Returning…'; }
+      sessionStorage.removeItem('dd-spotify-verifier');
+      setTimeout(function(){ location.href='/'; }, 1200);
+    })
+    .catch(function(){ msg.textContent = 'Connection issue. Returning…'; setTimeout(function(){ location.href='/'; }, 2000); });
+})();
+</script>
+</body>
+</html>
