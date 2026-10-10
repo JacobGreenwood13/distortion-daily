@@ -64,7 +64,42 @@ const DD_RADIO_TRACKS = [
   if (!bar) return;
 
   let player = null, currentIdx = 0, shuffleOn = true, repeatOn = false;
-  let playOrder = (function(){ const a = DD_RADIO_TRACKS.map((_,i)=>i); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=a[i]; a[i]=a[j]; a[j]=t; } return a; })();
+
+  // Cross-page persistence: remember track, order, and position in localStorage
+  const DD_RADIO_STATE_KEY = 'dd-radio-state-v1';
+  function freshOrder(){
+    const a = DD_RADIO_TRACKS.map((_,i)=>i);
+    for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=a[i]; a[i]=a[j]; a[j]=t; }
+    return a;
+  }
+  function loadState(){
+    try {
+      const s = JSON.parse(localStorage.getItem(DD_RADIO_STATE_KEY) || 'null');
+      if (!s || !Array.isArray(s.order) || s.n !== DD_RADIO_TRACKS.length) return null;
+      if (Date.now() - s.ts > 3600*1000) return null; // stale after an hour
+      if (typeof s.idx !== 'number' || s.idx < 0 || s.idx >= s.order.length) return null;
+      const ti = s.order[s.idx];
+      if (!DD_RADIO_TRACKS[ti] || DD_RADIO_TRACKS[ti].id !== s.vid) return null;
+      return s;
+    } catch(e){ return null; }
+  }
+  function saveState(){
+    if (!player || !player.getCurrentTime || !player.getPlayerState) return;
+    try {
+      const st = player.getPlayerState();
+      localStorage.setItem(DD_RADIO_STATE_KEY, JSON.stringify({
+        order: playOrder, idx: currentIdx,
+        time: player.getCurrentTime(),
+        playing: (st === YT.PlayerState.PLAYING || st === YT.PlayerState.BUFFERING),
+        vid: DD_RADIO_TRACKS[playOrder[currentIdx]].id,
+        n: DD_RADIO_TRACKS.length,
+        ts: Date.now()
+      }));
+    } catch(e){}
+  }
+  const restored = loadState();
+  let playOrder = restored ? restored.order : freshOrder();
+  if (restored) currentIdx = restored.idx;
 
   const titleEl = document.getElementById('dd-radio-track');
   const btnPlay = document.getElementById('dd-r-play');
@@ -103,8 +138,19 @@ const DD_RADIO_TRACKS = [
       playerVars:{ autoplay:0, controls:0, disablekb:1, fs:0, iv_load_policy:3, rel:0 },
       events:{
         onReady:function(){
-          player.cueVideoById(DD_RADIO_TRACKS[playOrder[currentIdx]].id);
+          const tr = DD_RADIO_TRACKS[playOrder[currentIdx]];
+          if (restored && restored.time > 3) {
+            // Pick up where the previous page left off
+            const pos = Math.floor(restored.time);
+            if (restored.playing) player.loadVideoById({videoId: tr.id, startSeconds: pos});
+            else player.cueVideoById({videoId: tr.id, startSeconds: pos});
+          } else {
+            player.cueVideoById(tr.id);
+          }
           updateTitle();
+          // Persist state every few seconds and on page leave, so the next page resumes
+          setInterval(saveState, 4000);
+          window.addEventListener('pagehide', saveState);
           // Ad detection: only when actively playing and video id mismatches the track
           setInterval(function(){
             if (!player || !player.getVideoData || !player.getPlayerState) return;
