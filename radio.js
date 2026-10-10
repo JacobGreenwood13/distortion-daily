@@ -35,7 +35,12 @@ const DD_RADIO_TRACKS = [
   {id:"NGJsiFklVVA",t:"Don't Talk To Me — GG Allin"},
   {id:"wcChJCrPtwI",t:"Cokie the Clown — NOFX"},
   {id:"TU07lEBfpNo",t:"Codependence Day — NOFX"},
-  {id:"nNII9dvgGDg",t:"Overrated (Everything Is) — Less Than Jake"}
+  {id:"nNII9dvgGDg",t:"Overrated (Everything Is) — Less Than Jake"},
+  {id:"xmmQ1kUk2kI",t:"Firestorm — Earth Crisis"},
+  {id:"ZHQWQI8pmqs",t:"The Wrath of Sanity — Earth Crisis"},
+  {id:"qbmWs6Jf5dc",t:"Anarchy in the UK — Sex Pistols"},
+  {id:"IL0nhn88aVA",t:"Die for Your Government — Anti-Flag"},
+  {id:"oh8zcbC_Dcw",t:"Story of My Life — Social Distortion"}
 ];
 
 (function(){
