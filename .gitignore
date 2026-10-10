@@ -1,0 +1,7 @@
+drafts/
+research/
+__pycache__/
+*.py
+*.pdf
+*.md
+distortion-daily-site.zip
