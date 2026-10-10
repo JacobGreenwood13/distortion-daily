@@ -38,8 +38,8 @@ const DD_RADIO_TRACKS = [
   const bar = document.getElementById('dd-radio');
   if (!bar) return;
 
-  let player = null, currentIdx = 0, shuffleOn = false, repeatOn = false;
-  let playOrder = DD_RADIO_TRACKS.map((_,i)=>i);
+  let player = null, currentIdx = 0, shuffleOn = true, repeatOn = false;
+  let playOrder = (function(){ const a = DD_RADIO_TRACKS.map((_,i)=>i); for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); const t=a[i]; a[i]=a[j]; a[j]=t; } return a; })();
 
   const titleEl = document.getElementById('dd-radio-track');
   const btnPlay = document.getElementById('dd-r-play');
@@ -117,6 +117,7 @@ const DD_RADIO_TRACKS = [
   });
   if (btnNext) btnNext.addEventListener('click', nextTrack);
   if (btnPrev) btnPrev.addEventListener('click', prevTrack);
+  if (btnShuffle) btnShuffle.classList.add('active');
   if (btnShuffle) btnShuffle.addEventListener('click', function(){
     shuffleOn = !shuffleOn;
     btnShuffle.classList.toggle('active', shuffleOn);
