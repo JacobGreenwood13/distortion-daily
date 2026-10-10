@@ -69,7 +69,10 @@ const DD_RADIO_TRACKS = [
   {id:"H8kMuluhKKQ",t:"Some Kind of Hate — Blood for Blood"},
   {id:"AvOMroxnOiU",t:"Cheap Wine — Blood for Blood"},
   {id:"OLnRlgVESEM",t:"Wasted Youth Crew (My Kind Belong Nowhere) — Blood for Blood"},
-  {id:"GkCZI_uqbVI",t:"Ain't Like You (Wasted Youth II) — Blood for Blood"}
+  {id:"GkCZI_uqbVI",t:"Ain't Like You (Wasted Youth II) — Blood for Blood"},
+  {id:"Enm9TD0y5Ok",t:"Watch Me Sink — Have Heart"},
+  {id:"6X5QrvaJdlI",t:"Life Is Hard Enough — Have Heart"},
+  {id:"Yf738EgINdA",t:"Watch Me Rise — Have Heart"}
 ];
 
 (function(){
