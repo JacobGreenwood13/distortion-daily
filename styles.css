@@ -246,10 +246,11 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 
 /* ---------- responsive ---------- */
 @media (max-width:720px){
-  .masthead .flag-mast{gap:2vw;padding:0 .75rem}
-  .masthead .flag{width:clamp(140px,38vw,320px)}
-  .masthead .flag-mast h1{font-size:clamp(1.8rem,8vw,2.6rem);text-align:left}
+  .masthead .flag-mast{justify-content:flex-start;gap:3vw;padding:0 .75rem}
+  .masthead .flag{width:clamp(150px,42vw,340px)}
+  .masthead .flag-mast h1{font-size:clamp(2rem,8.6vw,2.8rem);text-align:left}
   .masthead .flag-mast .tagline{text-align:left}
+  .masthead .stamp{font-size:.72rem;letter-spacing:.12em;padding:.3rem .7rem;white-space:nowrap}
   .brief{grid-template-columns:1fr}
   .brief .time{padding-top:0}
   .card:nth-child(odd),.card:nth-child(even){transform:none}
