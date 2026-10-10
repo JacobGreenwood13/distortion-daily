@@ -75,7 +75,12 @@ const DD_RADIO_TRACKS = [
   {id:"Yf738EgINdA",t:"Watch Me Rise — Have Heart"},
   {id:"ng_wwCrM_JI",t:"Strength Through Unity — 25 ta Life"},
   {id:"D7L03e4WuQ0",t:"Took My Kindness for Weakness — 25 ta Life"},
-  {id:"l9gdBFcZ20U",t:"Turning Point — 25 ta Life"}
+  {id:"l9gdBFcZ20U",t:"Turning Point — 25 ta Life"},
+  {id:"7asIpGLWIh8",t:"In the Belly of a Shark — Gallows"},
+  {id:"JBbzDjtXEW8",t:"Misery — Gallows"},
+  {id:"7RcDzVqI250",t:"London Is the Reason — Gallows"},
+  {id:"ADJ8eughJwQ",t:"The Vulture (Act I) — Gallows"},
+  {id:"-RbMRszWOiA",t:"The Vulture (Act II) — Gallows"}
 ];
 
 (function(){
