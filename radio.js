@@ -80,7 +80,11 @@ const DD_RADIO_TRACKS = [
   {id:"JBbzDjtXEW8",t:"Misery — Gallows"},
   {id:"7RcDzVqI250",t:"London Is the Reason — Gallows"},
   {id:"ADJ8eughJwQ",t:"The Vulture (Act I) — Gallows"},
-  {id:"-RbMRszWOiA",t:"The Vulture (Act II) — Gallows"}
+  {id:"-RbMRszWOiA",t:"The Vulture (Act II) — Gallows"},
+  {id:"kK7YZYTQbuA",t:"Gotta Go — Agnostic Front"},
+  {id:"9yWHSIsxIqs",t:"Victim in Pain — Agnostic Front"},
+  {id:"ebBjGp7QOGc",t:"For My Family — Agnostic Front"},
+  {id:"wcvDCxhDJmk",t:"Fireman — Jawbreaker"}
 ];
 
 (function(){
