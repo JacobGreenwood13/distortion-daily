@@ -3,7 +3,7 @@
  * Get the playlist ID from the Spotify playlist URL:
  *   open.spotify.com/playlist/XXXXX  →  "XXXXX"
  */
-const DD_RADIO_PLAYLIST_ID = "5x8sTGqcxPCJfhEVvH8vfK";; // TODO: Jacob's curated playlist
+const DD_RADIO_PLAYLIST_ID = "5x8sTGqcxPCJfhEVvH8vfK"; // Distortion Daily Radio
 
 (function() {
   const bar = document.getElementById('dd-radio');
