@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,600;0,800;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20261010c">
+<link rel="stylesheet" href="styles.css?v=20261010d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,5 61,39 98,39 68,61 79,95 50,73 21,95 32,61 2,39 39,39' fill='%23b3232a'/%3E%3C/svg%3E">
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@graph": [{"@type": "NewsMediaOrganization", "@id": "https://distortion-daily.org/#org", "name": "Distortion Daily", "url": "https://distortion-daily.org/", "slogan": "Follow the incentives.", "foundingLocation": "Dallas, TX", "logo": {"@type": "ImageObject", "url": "https://distortion-daily.org/logo.png", "width": 1254, "height": 1254}}, {"@type": "WebSite", "@id": "https://distortion-daily.org/#website", "url": "https://distortion-daily.org/", "name": "Distortion Daily", "description": "DIY political news board. No party, no masters, no sacred cows.", "publisher": {"@id": "https://distortion-daily.org/#org"}, "inLanguage": "en-US"}, {"@type": "WebPage", "@id": "https://distortion-daily.org/index.html#webpage", "url": "https://distortion-daily.org/index.html", "name": "Distortion Daily — Follow the Incentives", "description": "DIY political news board: no party, no masters, no sacred cows.", "isPartOf": {"@id": "https://distortion-daily.org/#website"}, "about": {"@id": "https://distortion-daily.org/#org"}, "inLanguage": "en-US"}, {"@type": "BreadcrumbList", "@id": "https://distortion-daily.org/index.html#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Distortion Daily", "item": "https://distortion-daily.org/"}]}]}
@@ -203,14 +203,21 @@
   <div class="dd-radio-inner">
     <div class="dd-radio-top">
       <span class="dd-radio-brand">DD <em>RADIO</em></span>
-      <span id="dd-radio-label">Political Punk — All Shuffled</span>
-      <button id="dd-spotify-login" title="Log into Spotify for full tracks">SPOTIFY LOGIN</button>
+      <div class="dd-radio-controls">
+        <button id="dd-r-prev" title="Back">⏮</button>
+        <button id="dd-r-play" title="Play/Pause">▶</button>
+        <button id="dd-r-next" title="Forward">⏭</button>
+        <button id="dd-r-shuffle" title="Shuffle">🔀</button>
+        <button id="dd-r-repeat" title="Repeat">🔁</button>
+      </div>
+      <span id="dd-radio-track">Loading…</span>
+      <div id="dd-ad-peek" title="Ad playing — click Skip when it appears"><div id="dd-yt-holder"></div></div>
       <button id="dd-radio-toggle">▼ HIDE</button>
     </div>
-    <iframe id="dd-radio-frame" src="" allow="encrypted-media; autoplay; clipboard-write" loading="lazy" title="Distortion Daily Radio"></iframe>
   </div>
+  
 </div>
-<script src="radio.js?v=20261010e"></script>
+<script src="radio.js?v=20261010f"></script>
 
 </body>
 </html>
