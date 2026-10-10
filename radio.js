@@ -125,7 +125,41 @@ const DD_RADIO_TRACKS = [
     s.className = 'dd-track-scroll';
     s.textContent = t + '  \u2715  ' + t + '  \u2715  ';
     titleEl.appendChild(s);
+    updateMediaSession(t);
   }
+  // Lock-screen / notification controls (Media Session API)
+  function updateMediaSession(t){
+    if (!('mediaSession' in navigator)) return;
+    try {
+      const parts = (t || '').split(' \u2014 ');
+      navigator.mediaSession.metadata = new MediaMetadata({
+        title: parts[0] || t || 'Distortion Daily Radio',
+        artist: parts[1] || 'Distortion Daily',
+        album: 'Distortion Daily Radio'
+      });
+    } catch(e){}
+  }
+  function wireMediaSession(){
+    if (!('mediaSession' in navigator)) return;
+    try {
+      navigator.mediaSession.setActionHandler('play', function(){ if (player) player.playVideo(); });
+      navigator.mediaSession.setActionHandler('pause', function(){ if (player) player.pauseVideo(); });
+      navigator.mediaSession.setActionHandler('previoustrack', function(){ prevTrack(); });
+      navigator.mediaSession.setActionHandler('nexttrack', function(){ nextTrack(); });
+    } catch(e){}
+  }
+  // If the browser pauses us when the tab hides, resume when the user comes back
+  let hiddenPlaying = false;
+  document.addEventListener('visibilitychange', function(){
+    if (!player || !player.getPlayerState) return;
+    if (document.hidden) {
+      const st = player.getPlayerState();
+      hiddenPlaying = (st === YT.PlayerState.PLAYING || st === YT.PlayerState.BUFFERING);
+    } else if (hiddenPlaying) {
+      hiddenPlaying = false;
+      try { player.playVideo(); } catch(e){}
+    }
+  });
   function updatePlayBtn(){
     if (!btnPlay || !player) return;
     const s = player.getPlayerState();
@@ -203,6 +237,7 @@ const DD_RADIO_TRACKS = [
   });
   if (btnNext) btnNext.addEventListener('click', nextTrack);
   if (btnPrev) btnPrev.addEventListener('click', prevTrack);
+  wireMediaSession();
   if (btnShuffle) btnShuffle.classList.add('active');
   if (btnShuffle) btnShuffle.addEventListener('click', function(){
     shuffleOn = !shuffleOn;
