@@ -32,7 +32,10 @@ const DD_RADIO_TRACKS = [
   {id:"sDwcHUeG6Nc",t:"Wild in the Streets — Circle Jerks"},
   {id:"V9n3riCpH7o",t:"The Art of American Football — Funeral For a Friend"},
   {id:"99KkbFjZR20",t:"Bite It You Scum — GG Allin"},
-  {id:"NGJsiFklVVA",t:"Don't Talk To Me — GG Allin"}
+  {id:"NGJsiFklVVA",t:"Don't Talk To Me — GG Allin"},
+  {id:"wcChJCrPtwI",t:"Cokie the Clown — NOFX"},
+  {id:"TU07lEBfpNo",t:"Codependence Day — NOFX"},
+  {id:"nNII9dvgGDg",t:"Overrated (Everything Is) — Less Than Jake"}
 ];
 
 (function(){
