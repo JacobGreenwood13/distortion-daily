@@ -17,4 +17,28 @@ const DD_RADIO_PLAYLIST_ID = "5x8sTGqcxPCJfhEVvH8vfK"; // Distortion Daily Radio
     bar.classList.toggle('collapsed');
     toggle.textContent = bar.classList.contains('collapsed') ? '▲ RADIO' : '▼ HIDE';
   });
+
+  // Spotify login: opens Spotify auth in a popup; embed picks up the session for full tracks
+  const loginBtn = document.getElementById('dd-spotify-login');
+  if (loginBtn) {
+    loginBtn.addEventListener('click', () => {
+      const w = window.open('https://accounts.spotify.com/en/login?continue=https%3A%2F%2Fopen.spotify.com%2F', '_blank', 'width=480,height=640');
+      const check = setInterval(() => {
+        if (!w || w.closed) {
+          clearInterval(check);
+          // Reload embed to pick up the new session
+          frame.src = frame.src;
+          loginBtn.textContent = 'SPOTIFY ✓';
+          loginBtn.classList.add('logged-in');
+          try { localStorage.setItem('dd-spotify-hint', '1'); } catch(e) {}
+        }
+      }, 1000);
+    });
+    try {
+      if (localStorage.getItem('dd-spotify-hint') === '1') {
+        loginBtn.textContent = 'SPOTIFY ✓';
+        loginBtn.classList.add('logged-in');
+      }
+    } catch(e) {}
+  }
 })();
