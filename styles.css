@@ -291,24 +291,27 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 .dd-radio-inner{max-width:1200px;margin:0 auto;padding:.7rem .75rem}
 .dd-radio-top{display:flex;align-items:center;gap:.6rem;height:54px}
 .dd-radio-brand{
-  display:flex;align-items:center;gap:.5rem;white-space:nowrap;
+  display:flex;align-items:center;white-space:nowrap;
 }
+/* Nietzsche logo: flush in the bar's left corner, full bar height, no gaps */
 .dd-radio-logo{
-  display:flex;align-items:center;justify-content:center;
-  width:54px;height:54px;background:#fff;border-radius:4px;padding:3px;flex:none;
+  position:absolute;left:0;top:4px;bottom:0;width:76px;
+  background:#fff;display:flex;align-items:center;justify-content:center;
+  padding:4px;
 }
 .dd-radio-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.dd-radio-inner{padding-left:calc(76px + .75rem)}
 .dd-radio-words{
   display:flex;flex-direction:column;line-height:1.1;
   font-family:var(--font-display);color:#b3232a;
   text-shadow:2px 2px 0 rgba(0,0,0,.65);
 }
 .dd-radio-words .dd-w-top{
-  font-size:1.5rem;
-  transform:scaleX(1.75);
+  font-size:1.15rem;
+  transform:scaleX(2.1);
   transform-origin:left center;
 }
-.dd-radio-words em{font-style:normal;font-size:1.05rem;letter-spacing:.06em}
+.dd-radio-words em{font-style:normal;font-size:1.15rem;letter-spacing:.06em}
 #dd-radio-label{flex:1}
 #dd-radio-label{
   font-family:var(--font-mono);font-size:.7rem;color:#b3232a;
@@ -322,8 +325,8 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 #dd-radio-toggle:hover{color:#b3232a}
 
 @media (max-width:720px){
-  .dd-radio-logo{width:44px;height:44px}
-  .dd-radio-words{font-size:.9rem}
+  .dd-radio-words .dd-w-top{font-size:1rem}
+  .dd-radio-words em{font-size:1rem}
   #dd-radio-label{display:none}
 }
 /* prevent content hiding behind radio bar */
