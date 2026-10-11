@@ -325,11 +325,6 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 #dd-radio-toggle:hover{color:#b3232a}
 
 @media (max-width:720px){
-  /* Mobile: logo becomes a normal in-flow square so the bar fits small screens */
-  .dd-radio-logo{position:static;width:52px;height:52px;flex:none;padding:3px}
-  .dd-radio-inner{padding-left:.75rem}
-  .dd-radio-brand{display:none}
-  .dd-radio-controls button{width:2.5rem;height:2.5rem;font-size:1rem}
   .dd-radio-words .dd-w-top{font-size:1rem}
   .dd-radio-words em{font-size:1rem}
   #dd-radio-label{display:none}
