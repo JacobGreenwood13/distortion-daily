@@ -109,7 +109,8 @@ const DD_RADIO_TRACKS = [
   {id:"GXCh9OhDiCI",t:"Jesus Built My Hotrod — Ministry"},
   {id:"5Q5X-PZDdak",t:"We Hate — Ministry"},
   {id:"ao-Sahfy7Hg",t:"Head Like a Hole — Nine Inch Nails"},
-  {id:"pwjLcwbT-xE",t:"March of the Pigs — Nine Inch Nails"}
+  {id:"pwjLcwbT-xE",t:"March of the Pigs — Nine Inch Nails"},
+  {id:"MJU0ZT072LA",t:"Hate Conquers All — Anti-Flag"}
 ];
 
 (function(){
