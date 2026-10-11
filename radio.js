@@ -91,6 +91,8 @@ const DD_RADIO_TRACKS = [
   {id:"wwue1UEhwwM",t:"War's Not Over, I've Just Found the Flag — Forus"},
 
   {id:"jTe1np3Vy18",t:"Slaves to the Pavement — Belvedere"},
+  {id:"PXw2sQxudZE",t:"Closed Doors — Belvedere"},
+  {id:"QnN9ot0jDXc",t:"Two Minutes for Looking So Good — Belvedere"},
   {id:"ywsTkaXM5do",t:"I Wipe My Ass with Showbiz — A Wilhelm Scream"},
 
   {id:"HSoWS2Tab_4",t:"The King Is Dead — A Wilhelm Scream"},
