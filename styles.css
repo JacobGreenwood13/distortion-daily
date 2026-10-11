@@ -291,10 +291,18 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 .dd-radio-inner{max-width:1200px;margin:0 auto;padding:.7rem .75rem}
 .dd-radio-top{display:flex;align-items:center;gap:.6rem;height:54px}
 .dd-radio-brand{
-  font-family:var(--font-display);font-size:1.25rem;letter-spacing:.06em;
-  color:#f3eee1;white-space:nowrap;
+  display:flex;align-items:center;gap:.5rem;white-space:nowrap;
 }
-.dd-radio-brand em{color:#b3232a;font-style:normal}
+.dd-radio-logo{
+  display:flex;align-items:center;justify-content:center;
+  width:54px;height:54px;background:#fff;border-radius:4px;padding:3px;flex:none;
+}
+.dd-radio-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.dd-radio-words{
+  display:flex;flex-direction:column;line-height:1.05;
+  font-family:var(--font-display);font-size:1.05rem;letter-spacing:.06em;color:#f3eee1;
+}
+.dd-radio-words em{color:#b3232a;font-style:normal}
 #dd-radio-label{flex:1}
 #dd-radio-label{
   font-family:var(--font-mono);font-size:.7rem;color:#b3232a;
@@ -308,7 +316,8 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 #dd-radio-toggle:hover{color:#b3232a}
 
 @media (max-width:720px){
-  .dd-radio-brand{font-size:1rem}
+  .dd-radio-logo{width:44px;height:44px}
+  .dd-radio-words{font-size:.9rem}
   #dd-radio-label{display:none}
 }
 /* prevent content hiding behind radio bar */
@@ -321,13 +330,13 @@ body{padding-bottom:130px}
 .dd-radio-controls{display:flex;gap:.3rem;align-items:center}
 .dd-radio-controls button{
   background:transparent;border:2px solid #f3eee1;color:#f3eee1;
-  font-size:1rem;width:2.5rem;height:2.5rem;display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;width:3rem;height:3rem;display:flex;align-items:center;justify-content:center;
   cursor:pointer;line-height:1;padding:0;
 }
 .dd-radio-controls button:hover{border-color:#b3232a;color:#b3232a}
 .dd-radio-controls button.active{background:#b3232a;border-color:#b3232a;color:#fff}
 #dd-radio-track{
-  flex:1;font-family:var(--font-mono);font-size:.85rem;color:#f3eee1;
+  flex:1;font-family:var(--font-mono);font-size:1rem;color:#f3eee1;
   white-space:nowrap;overflow:hidden;letter-spacing:.04em;
 }
 #dd-radio-track .dd-track-scroll{
@@ -338,8 +347,8 @@ body{padding-bottom:130px}
 /* Ad skip: inline button in bar; hidden YouTube layer positioned so its Skip sits under ours */
 #dd-r-skipad{
   display:none;background:#b3232a;border:2px solid #b3232a;color:#fff;
-  font-family:var(--font-mono);font-size:.65rem;font-weight:700;text-transform:uppercase;
-  letter-spacing:.08em;padding:.25rem .5rem;cursor:pointer;white-space:nowrap;
+  font-family:var(--font-mono);font-size:.75rem;font-weight:700;text-transform:uppercase;
+  letter-spacing:.08em;padding:.45rem .65rem;cursor:pointer;white-space:nowrap;
   animation:dd-pulse 1s infinite;
 }
 #dd-radio.ad-playing #dd-r-skipad{display:inline-block;pointer-events:none}
