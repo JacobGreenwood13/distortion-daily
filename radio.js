@@ -93,6 +93,7 @@ const DD_RADIO_TRACKS = [
   {id:"jTe1np3Vy18",t:"Slaves to the Pavement — Belvedere"},
   {id:"Gm8FYT5l1ew",t:"Waste — Good Riddance"},
   {id:"HSoWS2Tab_4",t:"The King Is Dead — A Wilhelm Scream"},
+  {id:"wD0ge1OclsY",t:"The Rip — A Wilhelm Scream"},
   {id:"cVv1CMJ2PFI",t:"No Shirt, No Shoes, No Salvation — Death by Stereo"}
 ];
 
