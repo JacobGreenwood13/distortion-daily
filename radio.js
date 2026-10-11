@@ -111,7 +111,8 @@ const DD_RADIO_TRACKS = [
   {id:"ao-Sahfy7Hg",t:"Head Like a Hole — Nine Inch Nails"},
   {id:"pwjLcwbT-xE",t:"March of the Pigs — Nine Inch Nails"},
   {id:"MJU0ZT072LA",t:"Hate Conquers All — Anti-Flag"},
-  {id:"rmmAC_OskyM",t:"Friends in the Armed Forces — Thursday"}
+  {id:"rmmAC_OskyM",t:"Friends in the Armed Forces — Thursday"},
+  {id:"aAD6lJiHBdA",t:"War All the Time — Thursday"}
 ];
 
 (function(){
