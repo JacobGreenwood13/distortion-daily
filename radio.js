@@ -62,7 +62,6 @@ const DD_RADIO_TRACKS = [
   {id:"U0u-OB7ztMg",t:"Start the Riot — Atari Teenage Riot"},
   {id:"IQHsRNd_Lew",t:"Into the Death — Atari Teenage Riot"},
   {id:"c4IujSNz7Tw",t:"Raverbashing — Atari Teenage Riot"},
-  {id:"L3m71EoIhN4",t:"Midijunkies — Atari Teenage Riot"},
   {id:"i8JBUktSxvQ",t:"Revolution Action — Atari Teenage Riot"},
   {id:"79WOWjezU0Y",t:"Destroy 2000 Years of Culture — Atari Teenage Riot"},
   {id:"ClKmUnncwtE",t:"I Am the Enemy — Blood for Blood"},
