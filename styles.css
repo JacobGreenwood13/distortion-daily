@@ -358,6 +358,7 @@ body{padding-bottom:130px}
   display:inline-block;white-space:nowrap;
   animation:dd-track-tick 14s linear infinite;
 }
+#dd-radio-track .dd-track-scroll.dd-no-scroll{animation:none}
 /* Song title gets its own row below the buttons, read from the right */
 .dd-radio-title-row{
   display:flex;align-items:center;

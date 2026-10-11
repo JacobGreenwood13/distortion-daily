@@ -181,6 +181,11 @@ const DD_RADIO_TRACKS = [
     s.className = 'dd-track-scroll';
     s.textContent = t + '  \u2715  ' + t + '  \u2715  ';
     titleEl.appendChild(s);
+    // Only marquee when the title actually overflows its row; short titles sit still at the right
+    requestAnimationFrame(()=>{ try {
+      const over = s.scrollWidth > titleEl.clientWidth + 4;
+      s.classList.toggle('dd-no-scroll', !over);
+    } catch(e){} });
     updateMediaSession(t);
   }
   // Lock-screen / notification controls (Media Session API)
