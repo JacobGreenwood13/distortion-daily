@@ -287,20 +287,20 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
   box-shadow:0 -4px 20px rgba(0,0,0,.4);
   transition:transform .3s ease;
 }
-#dd-radio.collapsed{transform:translateY(calc(100% - 56px))}
+#dd-radio.collapsed{transform:translateY(calc(100% - 66px))}
 .dd-radio-inner{max-width:1200px;margin:0 auto;padding:.6rem .75rem}
 .dd-radio-top{display:flex;align-items:center;gap:.6rem;height:56px}
 .dd-radio-brand{
   display:flex;align-items:center;white-space:nowrap;
 }
-/* Nietzsche logo: flush in the bar's left corner, full bar height, no gaps */
+/* Nietzsche logo: flush in the bar's left corner, full bar height, no gaps (desktop) */
 .dd-radio-logo{
-  position:absolute;left:0;top:4px;bottom:0;width:75px;
+  position:absolute;left:0;top:4px;bottom:0;width:111px;
   background:#fff;display:flex;align-items:center;justify-content:center;
-  padding:4px;
+  padding:5px;
 }
 .dd-radio-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
-.dd-radio-inner{padding-left:calc(75px + .75rem)}
+.dd-radio-inner{padding-left:calc(111px + .75rem)}
 .dd-radio-words{
   display:flex;flex-direction:column;line-height:1.1;
   font-family:var(--font-display);color:#b3232a;
@@ -325,13 +325,18 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
 #dd-radio-toggle:hover{color:#b3232a}
 
 @media (max-width:720px){
+  /* Mobile: logo becomes a normal in-flow square so the bar fits small screens */
+  .dd-radio-logo{position:static;width:52px;height:52px;flex:none;padding:3px}
+  .dd-radio-inner{padding-left:.75rem}
+  .dd-radio-brand{display:none}
+  .dd-radio-controls button{width:2.5rem;height:2.5rem;font-size:1rem}
   .dd-radio-words .dd-w-top{font-size:1rem}
   .dd-radio-words em{font-size:1rem}
   #dd-radio-label{display:none}
 }
 /* prevent content hiding behind radio bar */
 body{padding-bottom:130px}
-#dd-radio.collapsed ~ *{padding-bottom:56px}
+#dd-radio.collapsed ~ *{padding-bottom:66px}
 
 
 
@@ -345,12 +350,19 @@ body{padding-bottom:130px}
 .dd-radio-controls button:hover{border-color:#b3232a;color:#b3232a}
 .dd-radio-controls button.active{background:#b3232a;border-color:#b3232a;color:#fff}
 #dd-radio-track{
-  flex:1;font-family:var(--font-mono);font-size:1rem;color:#f3eee1;
-  white-space:nowrap;overflow:hidden;letter-spacing:.04em;
+  flex:1;min-width:0;
+  font-family:var(--font-mono);font-size:.95rem;color:#f3eee1;
+  white-space:nowrap;overflow:hidden;letter-spacing:.04em;text-align:right;
 }
 #dd-radio-track .dd-track-scroll{
   display:inline-block;white-space:nowrap;
   animation:dd-track-tick 14s linear infinite;
+}
+/* Song title gets its own row below the buttons, read from the right */
+.dd-radio-title-row{
+  display:flex;align-items:center;
+  height:24px;margin-top:.35rem;padding-top:.35rem;
+  border-top:1px solid rgba(243,238,225,.16);
 }
 @keyframes dd-track-tick{to{transform:translateX(-50%)}}
 /* Ad skip: inline button in bar; hidden YouTube layer positioned so its Skip sits under ours */
