@@ -49,6 +49,7 @@ const DD_RADIO_TRACKS = [
   {id:"BSXCogYvQlw",t:"Headbanger Face Rip — Municipal Waste"},
   {id:"Cgf11TwNBYo",t:"Wake the Dead — Comeback Kid"},
   {id:"hn13BLQv-UE",t:"Hailing on Me — Comeback Kid"},
+  {id:"-lD0SY9PfSU",t:"Broadcasting — Comeback Kid"},
   {id:"XN2FrUUq-zI",t:"Ready to Fall — Rise Against"},
   {id:"_RYBDTnS7dg",t:"Re-Education (Through Labor) — Rise Against"},
   {id:"IswsKb3fmTM",t:"Raised Ignorant EP — Capitalist Casualties"},
