@@ -107,7 +107,8 @@ const DD_RADIO_TRACKS = [
   {id:"qxaPj19VnRA",t:"Stigmata — Ministry"},
   {id:"GXCh9OhDiCI",t:"Jesus Built My Hotrod — Ministry"},
   {id:"5Q5X-PZDdak",t:"We Hate — Ministry"},
-  {id:"ao-Sahfy7Hg",t:"Head Like a Hole — Nine Inch Nails"}
+  {id:"ao-Sahfy7Hg",t:"Head Like a Hole — Nine Inch Nails"},
+  {id:"pwjLcwbT-xE",t:"March of the Pigs — Nine Inch Nails"}
 ];
 
 (function(){
