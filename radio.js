@@ -85,7 +85,8 @@ const DD_RADIO_TRACKS = [
 
   {id:"wcvDCxhDJmk",t:"Fireman — Jawbreaker"},
   {id:"Ud1DluFNCe0",t:"Madness at the Core of Time — GWAR"},
-  {id:"XvziPPpryv0",t:"Superman — Goldfinger"}
+  {id:"XvziPPpryv0",t:"Superman — Goldfinger"},
+  {id:"iIiz0amrb14",t:"I Only Go to School for the Handrails — Forus"}
 ];
 
 (function(){
