@@ -88,10 +88,7 @@ const DD_RADIO_TRACKS = [
   {id:"XvziPPpryv0",t:"Superman — Goldfinger"},
   {id:"iIiz0amrb14",t:"I Only Go to School for the Handrails — Forus"},
   {id:"sZF_VbF7-aA",t:"If All Else Fails — Forus"},
-  {id:"wwue1UEhwwM",t:"War's Not Over, I've Just Found the Flag — Forus"},
-
-
-  {id:"XWrNcDZzsUM",t:"Wild Ones — Downway"}
+  {id:"wwue1UEhwwM",t:"War's Not Over, I've Just Found the Flag — Forus"}
 ];
 
 (function(){
