@@ -84,7 +84,8 @@ const DD_RADIO_TRACKS = [
   {id:"9yWHSIsxIqs",t:"Victim in Pain — Agnostic Front"},
 
   {id:"wcvDCxhDJmk",t:"Fireman — Jawbreaker"},
-  {id:"Ud1DluFNCe0",t:"Madness at the Core of Time — GWAR"}
+  {id:"Ud1DluFNCe0",t:"Madness at the Core of Time — GWAR"},
+  {id:"XvziPPpryv0",t:"Superman — Goldfinger"}
 ];
 
 (function(){
