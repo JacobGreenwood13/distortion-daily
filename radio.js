@@ -102,7 +102,8 @@ const DD_RADIO_TRACKS = [
   {id:"KjJL5SNynZM",t:"Faces — Scary Kids Scaring Kids"},
   {id:"8CK-KwMcG9A",t:"Rise, Rebel, Resist — Otep"},
   {id:"Rt_7jaX8CsY",t:"Smash the Control Machine — Otep"},
-  {id:"y-jC3H_8Dk4",t:"Lifestyles of the Rich & Famous — Good Charlotte"}
+  {id:"y-jC3H_8Dk4",t:"Lifestyles of the Rich & Famous — Good Charlotte"},
+  {id:"tHl5EO77Rn4",t:"This Shit Will Fuck You Up — Combichrist"}
 ];
 
 (function(){
