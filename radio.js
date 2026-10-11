@@ -98,7 +98,8 @@ const DD_RADIO_TRACKS = [
   {id:"mxwcgHYC7eY",t:"Assimilate — Skinny Puppy"},
   {id:"5wdAD6eCmjM",t:"Worlock — Skinny Puppy"},
   {id:"kUCatOT1D-Q",t:"Paragun — Skinny Puppy"},
-  {id:"zhPx9QdzNpA",t:"N.W.O. — Ministry"}
+  {id:"zhPx9QdzNpA",t:"N.W.O. — Ministry"},
+  {id:"KjJL5SNynZM",t:"Faces — Scary Kids Scaring Kids"}
 ];
 
 (function(){
