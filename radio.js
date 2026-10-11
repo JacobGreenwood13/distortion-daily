@@ -89,12 +89,13 @@ const DD_RADIO_TRACKS = [
   {id:"iIiz0amrb14",t:"I Only Go to School for the Handrails — Forus"},
   {id:"sZF_VbF7-aA",t:"If All Else Fails — Forus"},
   {id:"wwue1UEhwwM",t:"War's Not Over, I've Just Found the Flag — Forus"},
-  {id:"aC1aCjWnu70",t:"Analog — Strung Out"},
+
   {id:"jTe1np3Vy18",t:"Slaves to the Pavement — Belvedere"},
-  {id:"Gm8FYT5l1ew",t:"Waste — Good Riddance"},
+  {id:"XXza98XERW8",t:"Brandy Wine — Belvedere"},
+  {id:"ywsTkaXM5do",t:"I Wipe My Ass with Showbiz — A Wilhelm Scream"},
+
   {id:"HSoWS2Tab_4",t:"The King Is Dead — A Wilhelm Scream"},
   {id:"wD0ge1OclsY",t:"The Rip — A Wilhelm Scream"},
-  {id:"cVv1CMJ2PFI",t:"No Shirt, No Shoes, No Salvation — Death by Stereo"}
 ];
 
 (function(){
