@@ -304,8 +304,9 @@ footer .fine{font-family:var(--font-mono);font-size:.72rem;color:rgba(243,238,22
   text-shadow:2px 2px 0 rgba(0,0,0,.65);
 }
 .dd-radio-words .dd-w-top{
-  display:flex;justify-content:space-between;
-  font-size:1.15rem;letter-spacing:0;
+  font-size:1.5rem;
+  transform:scaleX(1.75);
+  transform-origin:left center;
 }
 .dd-radio-words em{font-style:normal;font-size:1.05rem;letter-spacing:.06em}
 #dd-radio-label{flex:1}
