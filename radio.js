@@ -95,6 +95,10 @@ const DD_RADIO_TRACKS = [
 
   {id:"HSoWS2Tab_4",t:"The King Is Dead — A Wilhelm Scream"},
   {id:"wD0ge1OclsY",t:"The Rip — A Wilhelm Scream"},
+  {id:"mxwcgHYC7eY",t:"Assimilate — Skinny Puppy"},
+  {id:"5wdAD6eCmjM",t:"Worlock — Skinny Puppy"},
+  {id:"kUCatOT1D-Q",t:"Paragun — Skinny Puppy"},
+  {id:"zhPx9QdzNpA",t:"N.W.O. — Ministry"}
 ];
 
 (function(){
