@@ -38,7 +38,7 @@ const DD_RADIO_TRACKS = [
   {id:"xmmQ1kUk2kI",t:"Firestorm — Earth Crisis"},
   {id:"ZHQWQI8pmqs",t:"The Wrath of Sanity — Earth Crisis"},
   {id:"qbmWs6Jf5dc",t:"Anarchy in the UK — Sex Pistols"},
-  {id:"IL0nhn88aVA",t:"Die for Your Government — Anti-Flag"},
+  {id:"s5BeUo9jxIg",t:"We Are the One — Anti-Flag"},
   {id:"3mbvWn1EY6g",t:"Ace of Spades — Motörhead"},
   {id:"VnL1qKYbwQQ",t:"Powerload — Disfear"},
   {id:"eIXnoH4TVts",t:"A Brutal Sight of War — Disfear"},
