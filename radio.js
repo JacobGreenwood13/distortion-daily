@@ -66,7 +66,6 @@ const DD_RADIO_TRACKS = [
   {id:"ClKmUnncwtE",t:"I Am the Enemy — Blood for Blood"},
   {id:"1CP9Peipxzk",t:"White Trash Anthem — Blood for Blood"},
   {id:"QgXzA47_h8U",t:"Revenge on Society — Blood for Blood"},
-  {id:"H8kMuluhKKQ",t:"Some Kind of Hate — Blood for Blood"},
   {id:"AvOMroxnOiU",t:"Cheap Wine — Blood for Blood"},
   {id:"OLnRlgVESEM",t:"Wasted Youth Crew (My Kind Belong Nowhere) — Blood for Blood"},
   {id:"GkCZI_uqbVI",t:"Ain't Like You (Wasted Youth II) — Blood for Blood"},
